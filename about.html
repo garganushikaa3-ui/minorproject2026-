@@ -1,0 +1,180 @@
+{% extends 'base.html' %}
+
+{% block title %}About PathWise — Technical Career Decision Support{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row g-5">
+        <div class="col-lg-8">
+            <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill fw-semibold mb-2">Project Overview</span>
+            <h1 class="fw-bold mb-3">PathWise: Decision Support and Career Path Explorer</h1>
+            <p class="lead text-muted">
+                An explainable, data-driven career decision-support system designed for undergraduate computer applications (BCA) students.
+            </p>
+
+            <div class="card card-tech p-4 mb-4">
+                <h5 class="fw-bold text-navy mb-3"><i class="bi bi-compass text-primary me-2"></i> System Overview</h5>
+                <div class="row g-3 small">
+                    <div class="col-md-6">
+                        <strong>Platform:</strong> PathWise Decision Support System
+                    </div>
+                    <div class="col-md-6">
+                        <strong>Discipline:</strong> Computer Applications &amp; Software Engineering
+                    </div>
+                    <div class="col-md-6">
+                        <strong>Audience:</strong> BCA &amp; Undergraduate Computing Students
+                    </div>
+                    <div class="col-md-6">
+                        <strong>Version:</strong> v1.0 (Production Ready)
+                    </div>
+                </div>
+            </div>
+
+            <h4 class="fw-bold mt-4 mb-3">1. Problem Statement & Motivation</h4>
+            <p class="text-muted">
+                Undergraduate technical students face a crowded, rapidly shifting landscape of technical roles—ranging from traditional Software Engineering and Web Development to modern Cloud, DevOps, Data Science, and Cybersecurity. Students frequently experience decision paralysis due to:
+            </p>
+            <ul class="text-muted">
+                <li>Lack of consolidated, unbiased career information in one place.</li>
+                <li>Vague job descriptions that do not clarify day-to-day work tasks or required entry skills.</li>
+                <li>Misleading salary claims and unverified job promises from commercial bootcamps.</li>
+                <li>Overconfidence or underconfidence in self-rated skills without practical task evidence.</li>
+                <li>Lack of a structured, step-by-step roadmap from current BCA semester to career readiness.</li>
+            </ul>
+
+            <h4 class="fw-bold mt-4 mb-3">2. System Objectives</h4>
+            <p class="text-muted">
+                PathWise bridges these gaps through a five-pillar software architecture:
+            </p>
+            <div class="row g-3 mb-4">
+                <div class="col-md-6">
+                    <div class="p-3 bg-white border rounded-3 h-100">
+                        <div class="fw-bold text-primary mb-1"><i class="bi bi-search me-1"></i> Unified Exploration</div>
+                        <p class="small text-muted mb-0">Consolidates 38 verified technical occupations with official O*NET essential skills, tools, and labor market data.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="p-3 bg-white border rounded-3 h-100">
+                        <div class="fw-bold text-success mb-1"><i class="bi bi-diagram-3 me-1"></i> Explainable Scoring</div>
+                        <p class="small text-muted mb-0">Calculates transparent match scores using configurable weights across Interests (30%), Skills (30%), Tools (15%), Education (15%), and Preferences (10%).</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="p-3 bg-white border rounded-3 h-100">
+                        <div class="fw-bold text-warning mb-1"><i class="bi bi-flask me-1"></i> Practical Trial Labs</div>
+                        <p class="small text-muted mb-0">Provides small, safe problem-solving tasks in Data Analytics, Software Logic, Cybersecurity, and UX to test hands-on intuition.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="p-3 bg-white border rounded-3 h-100">
+                        <div class="fw-bold text-info mb-1"><i class="bi bi-sliders me-1"></i> What-If Simulation</div>
+                        <p class="small text-muted mb-0">Allows hypothetical experimentation with skills, priority weights, and tools without permanently modifying saved student records.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h4 class="fw-bold mt-4 mb-3">3. Technology Stack & Local Architecture</h4>
+            <p class="text-muted">
+                To guarantee reliable evaluation, maintainability, and full offline functionality during university viva examinations, PathWise uses a robust standard stack:
+            </p>
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped small">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Layer</th>
+                            <th>Technology</th>
+                            <th>Role in PathWise</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Backend</strong></td>
+                            <td>Python 3.13 &amp; Flask 3.1</td>
+                            <td>Lightweight REST routing, recommendation engine, session management, and server-side Jinja2 templating.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Data Analytics</strong></td>
+                            <td>Pandas &amp; OpenPyXL</td>
+                            <td>Processing and normalizing O*NET essential skills, BLS occupational matrices, and dataset validation.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Database</strong></td>
+                            <td>SQLite 3</td>
+                            <td>Embedded relational storage for user accounts, assessment histories, trial lab submissions, and quest badges.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Frontend</strong></td>
+                            <td>HTML5, CSS3, JavaScript, Bootstrap 5</td>
+                            <td>Modern responsive UI, custom dark-navy gradients, card layouts, and stepped questionnaire wizard.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Data Visualization</strong></td>
+                            <td>Chart.js</td>
+                            <td>Interactive radar charts and score breakdowns.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4 class="fw-bold mt-4 mb-3">4. Viva Demonstration Guide</h4>
+            <div class="accordion" id="vivaAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#viva1" aria-expanded="true">
+                            Q1: What makes the recommendation engine explainable rather than a 'black box'?
+                        </button>
+                    </h2>
+                    <div id="viva1" class="accordion-collapse collapse show" data-bs-parent="#vivaAccordion">
+                        <div class="accordion-body small text-muted">
+                            Unlike opaque black-box machine learning models, PathWise uses an explicit, multi-criteria weighted scoring formula. For every career, the student sees exact contribution percentages (Interests, Skills, Tools, Education, Preferences), the specific skills that matched, the exact tools missing, and an explicit 'Why Not This Career?' diagnostic module.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#viva2">
+                            Q2: What is the purpose of the Career Trial Lab and Evidence Check?
+                        </button>
+                    </h2>
+                    <div id="viva2" class="accordion-collapse collapse" data-bs-parent="#vivaAccordion">
+                        <div class="accordion-body small text-muted">
+                            Students often rate their skills based on theoretical coursework (e.g. self-rating Python 4/5). The Career Trial Lab presents practical domain tasks (e.g. finding a discount bug, interpreting cafeteria sales anomalies). The Evidence Check compares self-ratings with lab outcomes respectfully, highlighting areas for practice without discouragement or silent overwrites.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#viva3">
+                            Q3: How are international vs domestic salary figures handled?
+                        </button>
+                    </h2>
+                    <div id="viva3" class="accordion-collapse collapse" data-bs-parent="#vivaAccordion">
+                        <div class="accordion-body small text-muted">
+                            PathWise strictly avoids mixing global and domestic benchmarks. U.S. BLS 2025 figures are clearly labeled in USD ($) with year and source link. Separate, clearly identified India Tech Industry entry-to-mid career ranges (in INR Lakhs Per Annum) are provided to ensure students have realistic local expectations.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card card-tech p-4 mb-4 sticky-top" style="top: 80px;">
+                <h5 class="fw-bold mb-3"><i class="bi bi-shield-check text-success me-2"></i> Project Highlights</h5>
+                <ul class="list-unstyled small mb-4">
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> 38 Verified Technical Careers</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> 4 Interactive Practical Trial Labs</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Self-Rating vs Task Evidence Check</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> What-If Simulation &amp; Weight Sliders</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Career Switch Transition Bridge</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Career Quest Gamification &amp; Badges</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Schema Validation &amp; CSV Exporter</li>
+                </ul>
+                <div class="d-grid gap-2">
+                    <a href="{{ url_for('assessment') }}" class="btn btn-primary">Take Assessment</a>
+                    <a href="{{ url_for('methodology') }}" class="btn btn-outline-secondary btn-sm">Read Scoring Math</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
